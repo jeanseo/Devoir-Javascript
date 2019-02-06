@@ -3,31 +3,32 @@
 	<header>
 		<meta charset="utf-8">
 		<title>Application javascript</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-		<script src="js/dragndrop.js"></script>
+		<script src="js/dragndrop2.js" async></script>
 	</header>
 	<body>
 		<section id="sec1">
-			<h1>Bonjour ceci est un titre</h1>
-			<p>tiotototo</p>
-			<p> tutotoeu fo fèr com ça</p>
+			<h1>Analyseur d'image</h1>
+			<p>Choisissez votre méthode d'upload :</p>
 		</section>
 		<section id="sec2">
 			<form id="parcourir" method="post">
-				<div class="form-group">
-   				<label for="exampleFormControlFile1">Example file input</label>
-    			<input type="file" class="form-control-file" id="exampleFormControlFile1" name="pic" accept="image/*">
+				<div>
+    			<input type="file" name="pic" accept="image/*"><br><br>
     			<input type="submit">
     			</div>
     		</form>
+    		<hr>
        		<form id="dragndrop">
-    			<p id="status">Image</p>
-    			<div id="drop">Drag and drop ici :)</div>
-    			<div id="list"></div>
+    			<div id="dropzone"><p>Drop ici</p></div>
+    			<output id="list"></output><br>
     			<input type="submit">
     		</form>
+    	</section id="sec3">
+    		<div>
+    		</div>
+    	<section>
     	</section>
+
 	</body>
 </html> 
