@@ -1,13 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-    <script src="scripts/APIRequests.js"></script>
-    <script src="scripts/app.js"></script>
-</head>
-<body>
-<div id="results">
-</div>
-</body>
+<html>
+	<header>
+		<meta charset="utf-8">
+		<title>Application javascript</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<script src="js/dragndrop.js"></script>
+        <script src="scripts/APIRequests.js"></script>
+        <script src="scripts/app.js"></script>
+	</header>
+	<body>
+		<section id="sec1">
+			<h1>Bonjour ceci est un titre</h1>
+			<p> tutotoeu fo fèr com ça</p>
+		</section>
+		<section id="sec2">
+			<form id="parcourir" method="post">
+				<div class="form-group">
+   				<label for="exampleFormControlFile1">Example file input</label>
+    			<input type="file" class="form-control-file" id="exampleFormControlFile1" name="pic" accept="image/*">
+    			<input type="submit">
+    			</div>
+    		</form>
+       		<form id="dragndrop">
+    			<p id="status">Image</p>
+    			<div id="drop">Drag and drop ici :)</div>
+    			<div id="list"></div>
+    			<input type="submit">
+    		</form>
+    	</section>
+        <div id="results">
+        </div>
+	</body>
 </html>
