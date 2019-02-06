@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-</head>
-<body>
-Premiere page
-</body>
-</html>
+<html>
+	<header>
+		<meta charset="utf-8">
+		<title>Application javascript</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/dragndrop2.js" async></script>
+	</header>
+	<body>
+		<section id="sec1">
+			<h1>Analyseur d'image</h1>
+            <div class="red-divider"></div>
+			<p>Choisissez votre méthode d'upload :</p>
+		</section>
+		<section id="sec2">
+			<form id="parcourir" method="post">
+				<div>
+    			<input type="file" name="pic" accept="image/*">
+    			<input type="submit">
+    			</div>
+    		</form>
+    		<hr>
+       		<form id="dragndrop">
+    			<div id="dropzone"><p>Drop ici</p></div>
+    			<output id="list"></output><br>
+    			<input type="submit">
+    		</form>
+    	</section>
+
+	</body>
+</html> 
