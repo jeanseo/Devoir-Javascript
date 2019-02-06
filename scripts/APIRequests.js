@@ -1,29 +1,25 @@
 const visionApiURL = "https://francecentral.api.cognitive.microsoft.com/vision/v1.0/";
 function VisionAPIPost(action, file) {
 
-    var file = fileInput.files[0];
-    var imageType = /image.*/;
 
-    if (file.type.match(imageType)) {
         var reader = new FileReader();
+/*
+        reader.onload = function() {
+            fetch("", {
+                method : "post",
+                headers : {"Content-Type":"application/octet-stream",
+                    "Ocp-Apim-Subscription-Key":"3dd27f3728084d4b9e487d6b0390b7c4"
+                },
+                body : reader.result
+            }).then(response => {
+                console.log(response);
+            }).catch(error=> {
+                console.log(error)})
+        };
 
-        reader.onload = function(e) {
-            fileDisplayArea.innerHTML = "";
-
-            // Create a new image.
-            var img = new Image();
-            // Set the img src property using the data URL.
-            img.src = reader.result;
-
-            // Add the image to the page.
-            fileDisplayArea.appendChild(img);
-        }
-
-        reader.readAsDataURL(file);
-    } else {
-        fileDisplayArea.innerHTML = "File not supported!";
+        reader.readAsArrayBuffer(file);
     }
-
+*/
 
 
 
@@ -52,5 +48,5 @@ function VisionAPIPost(action, file) {
     req.open('POST', url, true);
     req.setRequestHeader("Ocp-Apim-Subscription-Key","3dd27f3728084d4b9e487d6b0390b7c4");
     req.setRequestHeader("Content-Type","application/octet-stream");
-    req.send(formData);
-}
+    req.send(reader.result);
+
