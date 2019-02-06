@@ -10,11 +10,15 @@ window.addEventListener("load", function() {
         let fileSize = file.size / 1024 / 1024; // en Mo
         if (fileSize > acceptedFileSize){
             console.log("fichier trop gros (4Mo max)");
+            text1="<p>fichier trop gros (4Mo max)</p>";
+            document.getElementById("image" ).innerHTML = text1;
             return;
         }
 
         if (!acceptedFileTypes.includes(file.type)){
             console.log("mauvais type de fichier");
+            text2="<p>mauvais type de fichier</p>";
+            document.getElementById("image" ).innerHTML = text2;
             return;
         }
 

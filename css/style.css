@@ -119,3 +119,7 @@ input:hover{
     width: 80%;
     margin: auto;
 }
+#image img{
+    height: 100%;
+    width: 100%;
+}
