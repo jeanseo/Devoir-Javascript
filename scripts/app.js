@@ -3,6 +3,7 @@ const acceptedFileSize = 4;
 
 window.addEventListener("load", function() {
     document.getElementById("image_input").addEventListener("change", function(){
+
         let file = this.files[0];
         //Vérification des caractéristiques du fichier
 
@@ -19,7 +20,7 @@ window.addEventListener("load", function() {
 
         //affichage du fichier
         let reader = new FileReader();
-        let divImageDisplay = document.getElementById("imageDisplay")
+        let divImageDisplay = document.getElementById("image")
         reader.onload = function (e) {
             //On vérifie s'il y a déjà une image
             if (divImageDisplay.querySelector("img") == null) {
@@ -43,13 +44,13 @@ window.addEventListener("load", function() {
 
 
 function displayAnalysis(action, result) {
-    text="<h3>Description<h3>"
+    text="<h2>Description</h2>"
     text+="<p>"+result.description.captions[0].text+"</p>"
     text+="<h3>tags</h3>"
-    text+="<ul>"
+    text+="<ol>"
     result.description.tags.forEach(function(element) {
         text+="<li>"+element+"</li>"
     });
-    text+="</ul>";
+    text+="</ol>";
     document.getElementById("results" ).innerHTML = text;
 }
