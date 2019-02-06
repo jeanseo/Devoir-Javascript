@@ -1,5 +1,32 @@
 const visionApiURL = "https://francecentral.api.cognitive.microsoft.com/vision/v1.0/";
 function VisionAPIPost(action, file) {
+
+    var file = fileInput.files[0];
+    var imageType = /image.*/;
+
+    if (file.type.match(imageType)) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            fileDisplayArea.innerHTML = "";
+
+            // Create a new image.
+            var img = new Image();
+            // Set the img src property using the data URL.
+            img.src = reader.result;
+
+            // Add the image to the page.
+            fileDisplayArea.appendChild(img);
+        }
+
+        reader.readAsDataURL(file);
+    } else {
+        fileDisplayArea.innerHTML = "File not supported!";
+    }
+
+
+
+
     const  req = new XMLHttpRequest();
     let url = visionApiURL+action;
     let body= {"url":"https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"};
