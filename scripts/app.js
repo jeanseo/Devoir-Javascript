@@ -1,16 +1,22 @@
 const acceptedFileTypes = ["image/jpeg", "image/png", "image/gif", "image/bmp"];
-
+const acceptedFileSize = 4;
 
 window.addEventListener("load", function() {
     document.getElementById("image_input").addEventListener("change", function(){
         let file = this.files[0];
         //Vérification des caractéristiques du fichier
-        console.log(file.type);
-        console.log(acceptedFileTypes.includes(file.type));
-        if (acceptedFileTypes.includes(file.type)){
+
+        let fileSize = file.size / 1024 / 1024; // en Mo
+        if (fileSize > acceptedFileSize){
+            console.log("fichier trop gros (4Mo max)");
+            return;
+        }
+
+        if (!acceptedFileTypes.includes(file.type)){
             console.log("mauvais type de fichier");
             return;
         }
+
         //affichage du fichier
         let reader = new FileReader();
         let divImageDisplay = document.getElementById("imageDisplay")
