@@ -35,13 +35,31 @@ window.addEventListener("load", function() {
 
 
         //Envoie le fichier à l'API
-        VisionAPIPost("describe", file);
+        VisionAPIFilePost("describe", file);
 
     });
 
 });
 
+window.addEventListener("load", function() {
+    const myForm = document.querySelector("#urlform");
+    const URLField = document.querySelector("#imageURL");
+    myForm.addEventListener("submit", (evenement) => {
+        evenement.preventDefault();
+        //affichage du fichier
+        let divImageDisplay = document.getElementById("image")
+            //On vérifie s'il y a déjà une image
+        if (divImageDisplay.querySelector("img") == null) {
+            //On crée l'élément image
+            let img = document.createElement("img");
+            img.setAttribute("id", "analyzed_picture");
+            divImageDisplay.appendChild(img);
+        }
+        document.getElementById("analyzed_picture").setAttribute("src",URLField.value)
 
+        VisionAPIURLPost("describe", URLField.value);
+    });
+});
 
 function displayAnalysis(action, result) {
     text="<h2>Description</h2>"
