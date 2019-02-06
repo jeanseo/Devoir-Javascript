@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
 	background-color: #EEEEEE;
 }
 section {
@@ -9,12 +10,31 @@ section {
 	margin-bottom: 5px;
 	border: solid;
 
+=======
+	background-color: #FFFFFF;
+}
+section {
+	display:flex;
+	margin-right: 20%;
+	margin-left: 20%;
+	margin-bottom: 5px;
+    text-align: center;
+    background: #CCCCCC;
+    border-radius: 10px;
+    border: 2px solid #BBBBBB;
+>>>>>>> Jeremy-Gobert
 }
 
 section > h1 {
 	text-align: center;
+<<<<<<< HEAD
 	font-size: 55px;
 	font-family: serif;
+=======
+	font-size: 35px;
+	font-family: "Lato";
+    color: #FFFFFF;
+>>>>>>> Jeremy-Gobert
 }
 
 section form {
@@ -28,6 +48,13 @@ section#sec1{
 section#sec1 p {
 	padding-bottom: 5%;
 	text-align: center;
+<<<<<<< HEAD
+=======
+    font-family: "Lato";
+    color: #FFFFFF;
+    
+    
+>>>>>>> Jeremy-Gobert
 }
 
 section#sec2{
@@ -41,10 +68,21 @@ section#sec2{
 #dragndrop {
 	width: 50%;
 }
+<<<<<<< HEAD
 
 #dropzone {
 	border: dotted;
 	color: grey;
+=======
+#dragndrop #dropzone p {
+    font-size: 15px;
+    font-family: "Lato";
+    color: #FFFFFF;
+}
+#dropzone {
+	border: dotted;
+	color: #FFFFFF;
+>>>>>>> Jeremy-Gobert
 }
 
 #dropzone p {
@@ -52,4 +90,32 @@ section#sec2{
 	text-align: center;
 	padding-top: 15%;
 	padding-bottom: 15%;
+<<<<<<< HEAD
 }
+=======
+}
+.red-divider {
+    
+    width: 100px;
+    height: 2px;
+    background: #FFFFFF;
+    margin: 0 auto;
+}
+input {
+    font-weight: bold;
+    text-transform: uppercase;
+    color:#FFFFFF;
+    display: inline-block;
+    border: 1px solid white;
+    margin-top: 20px;
+    padding: 18px 30px;
+    border-radius: 3pxx@;
+    transition: all 0.3s ease-in 0s;
+    background: transparent;
+}
+input:hover{
+    background: #FFFFFF;
+    color :#000000;
+    text-decoration: none;
+}
+>>>>>>> Jeremy-Gobert
