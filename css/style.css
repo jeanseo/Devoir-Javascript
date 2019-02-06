@@ -58,22 +58,8 @@ section#sec4{
 	width: 50%;
 }
 
-#dragndrop {
+#urlform {
 	width: 50%;
-}
-#dragndrop #dropzone p {
-    font-size: 15px;
-    font-family: "Lato";
-}
-#dropzone {
-	border: dotted;
-}
-
-#dropzone p {
-	color: black;
-	text-align: center;
-	padding-top: 15%;
-	padding-bottom: 15%;
 }
 .red-divider {
     
