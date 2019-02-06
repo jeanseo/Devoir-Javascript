@@ -1,5 +1,11 @@
 window.addEventListener("load", function() {
-    VisionAPIPost("describe");
+    document.getElementById("image_input").addEventListener("change", function(){
+        let file = this.files[0];
+        console.log(file);
+        VisionAPIPost("describe", file);
+
+    });
+
 });
 
 
