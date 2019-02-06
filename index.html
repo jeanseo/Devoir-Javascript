@@ -15,9 +15,12 @@
 			<p>Choisissez votre méthode d'upload :</p>
 		</section>
 		<section id="sec2">
-			<form>
-				<input type="text" id="imageURL" placeholder="url de l'image">
-				<input type="submit">
+			<form id="parcourir" method="post">
+				<div class="form-group">
+					<label for="image_input">Example file input</label>
+					<input type="file" class="form-control-file" id="image_input" name="pic" accept="image/*">
+					<input type="submit">
+				</div>
 			</form>
     		<hr>
        		<form id="dragndrop">
@@ -26,7 +29,7 @@
     			<input type="submit">
     		</form>
     	</section>
-        
+
         		<section id="sec3">
                 <div>
                 <h2>Image insérée</h2>
@@ -41,4 +44,4 @@
             </div>
     	</section>
 	</body>
-</html> 
+</html>
